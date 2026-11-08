@@ -42,7 +42,7 @@ meta_val_class = load_vinyals_split(
     "val",
     dataset.name_to_label
 )
-pritn(f"Meta training classes: {len(meta_train_class)}")
+print(f"Meta training classes: {len(meta_train_class)}")
 print(f"Meta validation classes: {len(meta_val_class)}")
 
 model = Protonet().to(device)
