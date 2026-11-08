@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torch import optim
+from pathlib import Path
 
 from main import class_to_indices
 from utils.omniglot import OmniglotCombined
@@ -15,6 +16,9 @@ elif torch.backends.mps.is_available():
 else:
     device = torch.device('cpu')
 print(f"Using device: {device}")
+
+Path("checkpoints").mkdir(parents=True, exist_ok=True)
+Path("results").mkdir(parents=True, exist_ok=True)
 
 TRAIN_WAY = 60
 VAL_WAY = 5
