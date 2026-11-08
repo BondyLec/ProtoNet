@@ -30,7 +30,7 @@ print(f"Meta testing classes: {len(meta_test_classes)}")
 
 model = Protonet().to(device)
 checkpoint = torch.load(
-    "./checkpoints/best_1shot.pt",
+    "./checkpoints/best_5shot.pt",
     map_location=device
 )
 model.load_state_dict(checkpoint)
