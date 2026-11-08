@@ -22,7 +22,7 @@ Path("results").mkdir(parents=True, exist_ok=True)
 
 TRAIN_WAY = 60
 VAL_WAY = 5
-K_SHOT = 1
+K_SHOT = 5
 
 TRAIN_QUERY = 5
 VAL_QUERY = 5
@@ -151,5 +151,5 @@ for episode in range(NUM_EPISODES):
 
     if val_accuracy > best_val_accuracy:
         best_val_accuracy = val_accuracy
-        torch.save(model.state_dict(), "./checkpoints/best_1shot.pt")
+        torch.save(model.state_dict(), "./checkpoints/best_5shot.pt")
         print(f"New best model saved with accuracy: {best_val_accuracy:.4f}")
