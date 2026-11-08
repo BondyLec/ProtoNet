@@ -15,7 +15,7 @@ else:
 print(f"Using device: {device}")
 
 N_WAY = 5
-K_SHOT = 1
+K_SHOT = 5
 Q_QUERY = 15
 NUM_TEST_EPISODES = 1000
 dataset = OmniglotCombined(
